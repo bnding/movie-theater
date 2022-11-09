@@ -5,20 +5,20 @@ import java.time.LocalDateTime;
 public class Showing {
     private Movie movie;
     private int sequenceOfTheDay;
-    private LocalDateTime showStartTime;
+    private LocalDateTime showStartDateTime;
 
-    public Showing(Movie movie, int sequenceOfTheDay, LocalDateTime showStartTime) {
+    public Showing(Movie movie, int sequenceOfTheDay, LocalDateTime showStartDateTime) {
         this.movie = movie;
         this.sequenceOfTheDay = sequenceOfTheDay;
-        this.showStartTime = showStartTime;
+        this.showStartDateTime = showStartDateTime;
     }
 
     public Movie getMovie() {
         return movie;
     }
 
-    public LocalDateTime getStartTime() {
-        return showStartTime;
+    public LocalDateTime getStartDateTime() {
+        return showStartDateTime;
     }
 
     public boolean isSequence(int sequence) {

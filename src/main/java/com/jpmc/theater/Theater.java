@@ -45,7 +45,7 @@ public class Theater {
         System.out.println(provider.currentDate());
         System.out.println("===================================================");
         schedule.forEach(s ->
-                System.out.println(s.getSequenceOfTheDay() + ": " + s.getStartTime() + " " + s.getMovie().getTitle() + " " + humanReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovieFee())
+                System.out.println(s.getSequenceOfTheDay() + ": " + s.getStartDateTime() + " " + s.getMovie().getTitle() + " " + humanReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovieFee())
         );
         System.out.println("===================================================");
     }
