@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Customer {
 
-    private String name;
+    private final String name;
 
-    private String id;
+    private final String id;
 
     /**
      * @param name customer name

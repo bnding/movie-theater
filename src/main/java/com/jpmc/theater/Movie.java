@@ -6,9 +6,8 @@ import java.time.LocalTime;
 
 public class Movie {
     private static final int MOVIE_CODE_SPECIAL = 1;
-    private String title;
-    private String description;
-    private Duration runningTime;
+    private final String title;
+    private final Duration runningTime;
     private double ticketPrice;
     private int specialCode;
 
@@ -43,9 +42,9 @@ public class Movie {
         double percentOffDiscount = 0;
         double flatSumDiscount = 0;
 
-        if(currentShowingLocalTime.isAfter(LocalTime.of(10, 59)) && currentShowingLocalTime.isBefore(LocalTime.of(16,1))) {
+        if(inTimeRangeExclusive(LocalTime.of(10, 59), LocalTime.of(16,1), currentShowingLocalTime)) {
             percentOffDiscount = ticketPrice * 0.25; // 25% discount for movies showing between 11AM - 4PM inclusive
-        } else if (MOVIE_CODE_SPECIAL == specialCode) {
+        } else if (specialCode == MOVIE_CODE_SPECIAL) {
             percentOffDiscount = ticketPrice * 0.2;  // 20% discount for special movie
         }
 
@@ -61,6 +60,10 @@ public class Movie {
         return Math.max(percentOffDiscount, flatSumDiscount);
     }
 
+    private boolean inTimeRangeExclusive(LocalTime after, LocalTime before, LocalTime currLocalTime) {
+        return currLocalTime.isAfter(after) && currLocalTime.isBefore(before);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,13 +71,12 @@ public class Movie {
         Movie movie = (Movie) o;
         return Double.compare(movie.ticketPrice, ticketPrice) == 0
                 && Objects.equals(title, movie.title)
-                && Objects.equals(description, movie.description)
                 && Objects.equals(runningTime, movie.runningTime)
                 && Objects.equals(specialCode, movie.specialCode);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, description, runningTime, ticketPrice, specialCode);
+        return Objects.hash(title, runningTime, ticketPrice, specialCode);
     }
 }
