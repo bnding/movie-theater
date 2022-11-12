@@ -5,11 +5,12 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import org.json.*;
 
 public class Theater {
 
     LocalDateProvider provider;
-    private final List<Showing> schedule;
+    private List<Showing> schedule;
 
     public Theater(LocalDateProvider provider) {
         this.provider = provider;
@@ -45,9 +46,33 @@ public class Theater {
         System.out.println(provider.currentDate());
         System.out.println("===================================================");
         schedule.forEach(s ->
-                System.out.println(s.getSequenceOfTheDay() + ": " + s.getStartDateTime() + " " + s.getMovie().getTitle() + " " + humanReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovieFee())
+                System.out.println(s.getSequenceOfTheDay() + ": " + s.getStartDateTime() + " " + s.getMovie().getTitle() + " " + humanReadableFormat(s.getMovie().getRunningTime()) + " $" + s.getMovie().getFullTicketPrice())
         );
         System.out.println("===================================================");
+    }
+
+    public void printJson() {
+        JSONObject theaterObj = new JSONObject();
+        JSONArray showingArr = new JSONArray();
+
+        theaterObj.put("currentDay", provider.currentDate());
+        for(Showing s : schedule) {
+            JSONObject showingObj = new JSONObject();
+            JSONObject movieObj = new JSONObject();
+
+            movieObj.put("title", s.getMovie().getTitle());
+            movieObj.put("runningTime", s.getMovie().getRunningTime());
+            movieObj.put("fullTicketPrice", s.getMovie().getFullTicketPrice());
+            movieObj.put("ticketPriceAfterDiscount", s.getMovie().getTicketPriceAfterDiscount(s));
+            movieObj.put("specialCode", s.getMovie().getSpecialCode());
+            showingObj.put("movie", movieObj);
+            showingObj.put("showingStartTime", s.getStartDateTime());
+            showingObj.put("showingSequence", s.getSequenceOfTheDay());
+            showingArr.put(showingObj);
+        }
+        theaterObj.put("showings", showingArr);
+
+        System.out.println(theaterObj.toString(4));
     }
 
     public String humanReadableFormat(Duration duration) {
@@ -70,5 +95,7 @@ public class Theater {
     public static void main(String[] args) {
         Theater theater = new Theater(LocalDateProvider.singleton());
         theater.printSchedule();
+
+        theater.printJson();
     }
 }

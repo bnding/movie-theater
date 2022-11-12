@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7d134a-1b39-4bfe-8d71-a532a31af5c5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/LocalDateProviderTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/MovieTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/ReservationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/TheaterTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Reservation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Showing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Showing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Theater.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Theater.class" afterDir="false" />
     </list>

@@ -1,7 +1,7 @@
 package com.jpmc.theater;
 
 public class Reservation {
-    private Customer customer;
+    private final Customer customer;
     private Showing showing;
     private int audienceCount;
 
@@ -12,6 +12,6 @@ public class Reservation {
     }
 
     public double totalFee() {
-        return showing.getMovieFee() * audienceCount;
+        return showing.calculateFee(audienceCount);
     }
 }

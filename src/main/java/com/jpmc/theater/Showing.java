@@ -21,19 +21,11 @@ public class Showing {
         return showStartDateTime;
     }
 
-    public boolean isSequence(int sequence) {
-        return this.sequenceOfTheDay == sequence;
-    }
-
-    public double getMovieFee() {
-        return movie.getTicketPrice();
-    }
-
     public int getSequenceOfTheDay() {
         return sequenceOfTheDay;
     }
 
-    private double calculateFee(int audienceCount) {
-        return movie.calculateTicketPrice(this) * audienceCount;
+    public double calculateFee(int audienceCount) {
+        return movie.getTicketPriceAfterDiscount(this) * audienceCount;
     }
 }
