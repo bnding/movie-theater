@@ -15,7 +15,7 @@ public class Theater {
     public Theater(LocalDateProvider provider) {
         this.provider = provider;
 
-        Movie spiderMan = new Movie("Spider-Man: No Way Home", Duration.ofMinutes(90), 12.5, 1);
+        Movie spiderMan = new Movie("Spider-Man: No Way Home", Duration.ofMinutes(90), 8, 1);
         Movie turningRed = new Movie("Turning Red", Duration.ofMinutes(85), 11, 0);
         Movie theBatMan = new Movie("The Batman", Duration.ofMinutes(95), 9, 0);
         schedule = List.of(
@@ -32,14 +32,24 @@ public class Theater {
     }
 
     public Reservation reserve(Customer customer, int sequence, int howManyTickets) {
+        Showing showing = getShowingFromSchedule(sequence);
+        return new Reservation(customer, showing, howManyTickets);
+    }
+
+    //protected methods used for unit tests
+    Showing getShowingFromSchedule(int sequence) {
         Showing showing;
         try {
             showing = schedule.get(sequence - 1);
         } catch (RuntimeException ex) {
             ex.printStackTrace();
-            throw new IllegalStateException("not able to find any showing for given sequence " + sequence);
+            throw new IllegalStateException("ERROR: Unable to find any showing for given sequence " + sequence);
         }
-        return new Reservation(customer, showing, howManyTickets);
+        return showing;
+    }
+
+    List<Showing> getSchedule() {
+        return schedule;
     }
 
     public void printSchedule() {
@@ -75,7 +85,7 @@ public class Theater {
         System.out.println(theaterObj.toString(4));
     }
 
-    public String humanReadableFormat(Duration duration) {
+    private String humanReadableFormat(Duration duration) {
         long hour = duration.toHours();
         long remainingMin = duration.toMinutes() - TimeUnit.HOURS.toMinutes(duration.toHours());
 
@@ -94,8 +104,8 @@ public class Theater {
 
     public static void main(String[] args) {
         Theater theater = new Theater(LocalDateProvider.singleton());
-        theater.printSchedule();
 
+        theater.printSchedule();
         theater.printJson();
     }
 }

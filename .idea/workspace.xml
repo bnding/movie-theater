@@ -5,21 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7d134a-1b39-4bfe-8d71-a532a31af5c5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/LocalDateProviderTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/MovieTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/ReservationTests.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/TheaterTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Showing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jpmc/theater/Theater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/MovieTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Showing.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Showing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/ReservationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/ReservationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/jpmc/theater/TheaterTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Theater.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jpmc/theater/Theater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/MovieTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/MovieTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/ReservationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/ReservationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/TheaterTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/jpmc/theater/TheaterTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +53,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Theater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.Theater" />
+  <component name="RunManager" selected="JUnit.LocalDateProviderTests.testCurrentTime">
+    <configuration name="LocalDateProviderTests.makeSureCurrentTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="movie-theater" />
       <extension name="coverage">
         <pattern>
@@ -66,13 +62,84 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.LocalDateProviderTests" />
+      <option name="METHOD_NAME" value="makeSureCurrentTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalDateProviderTests.testCurrentTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-theater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpmc.theater.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.LocalDateProviderTests" />
+      <option name="METHOD_NAME" value="testCurrentTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-theater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpmc.theater.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.MovieTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovieTests.testGetTicketPriceAfterDiscountFlatRateOnly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-theater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpmc.theater.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.MovieTests" />
+      <option name="METHOD_NAME" value="testGetTicketPriceAfterDiscountFlatRateOnly(int,double)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReservationTests.testTotalFeeWithFlatRateDiscounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="movie-theater" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jpmc.theater.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jpmc.theater" />
+      <option name="MAIN_CLASS_NAME" value="com.jpmc.theater.ReservationTests" />
+      <option name="METHOD_NAME" value="testTotalFeeWithFlatRateDiscounts(int,double)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Theater" />
+        <item itemvalue="JUnit.LocalDateProviderTests.testCurrentTime" />
+        <item itemvalue="JUnit.LocalDateProviderTests.makeSureCurrentTime" />
+        <item itemvalue="JUnit.MovieTests.testGetTicketPriceAfterDiscountFlatRateOnly" />
+        <item itemvalue="JUnit.MovieTests" />
+        <item itemvalue="JUnit.ReservationTests.testTotalFeeWithFlatRateDiscounts" />
       </list>
     </recent_temporary>
   </component>
